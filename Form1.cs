@@ -1392,7 +1392,7 @@ namespace RelocateExportTable
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
-                WorkingDirectory = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Hitman Absolution\\Debug",
+                WorkingDirectory = Path.GetDirectoryName(txtPDBPath.Text),
                 FileName = "dll2lib.bat",
                 Arguments = string.Format("{0} {1}", "32", fileName),
                 UseShellExecute = false,
